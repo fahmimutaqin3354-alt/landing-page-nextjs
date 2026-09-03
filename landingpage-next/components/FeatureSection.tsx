@@ -98,7 +98,7 @@ export default function FeatureSection({ onRequestDemo }: FeatureSectionProps) {
   };
 
   return (
-    <section id="fitur" className="py-20 bg-slate-50 relative border-b border-slate-200/80">
+    <section id="fitur" className="py-20 bg-slate-50 relative border-b border-slate-200/80 content-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

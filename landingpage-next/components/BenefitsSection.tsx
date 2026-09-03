@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import {
   CheckCircle2,
@@ -56,7 +54,7 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section id="manfaat" className="py-20 bg-slate-50 relative border-b border-slate-200/80">
+    <section id="manfaat" className="py-20 bg-slate-50 relative border-b border-slate-200/80 content-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

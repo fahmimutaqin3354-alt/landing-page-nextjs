@@ -11,7 +11,7 @@ interface FooterProps {
 
 export default function Footer({ onRequestDemo }: FooterProps) {
   return (
-    <footer id="kontak" className="bg-slate-950 text-slate-400 text-xs border-t border-slate-800">
+    <footer id="kontak" className="bg-slate-950 text-slate-400 text-xs border-t border-slate-800 content-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
           

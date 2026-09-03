@@ -86,7 +86,7 @@ export default function SolutionSection({ onRequestDemo }: SolutionSectionProps)
   };
 
   return (
-    <section id="solusi" className="py-20 bg-white relative border-b border-slate-200/80">
+    <section id="solusi" className="py-20 bg-white relative border-b border-slate-200/80 content-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

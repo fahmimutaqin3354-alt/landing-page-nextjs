@@ -67,7 +67,7 @@ export default function HowItWorks() {
   };
 
   return (
-    <section id="cara-kerja" className="py-20 bg-white relative border-b border-slate-200/80">
+    <section id="cara-kerja" className="py-20 bg-white relative border-b border-slate-200/80 content-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

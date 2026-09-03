@@ -16,7 +16,7 @@ export default function CTASection({ onRequestDemo }: CTASectionProps) {
   };
 
   return (
-    <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
+    <section className="py-20 bg-slate-900 text-white relative overflow-hidden content-auto">
       {/* Glow Effects */}
       <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />

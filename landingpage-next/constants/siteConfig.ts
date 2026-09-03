@@ -12,10 +12,10 @@ export const SITE_CONFIG = {
   whatsappDefaultMessage: "Halo Tim CPC, saya ingin konsultasi mengenai Sistem Manajemen Konstruksi Perumahan.",
 
   // Email resmi perusahaan
-  companyEmail: "info@cpc-system.id",
+  companyEmail: "microdataindonesia@gmail.com",
 
   // Alamat kantor resmi
-  companyAddress: "Gedung Graha Konstruksi Lt. 8, Jl. TB Simatupang, Jakarta Selatan",
+  companyAddress: "Microdata Indonesia Jl. Endro Suratmin No.52d, Way Dadi, Kec. Sukarame, Kota Bandar Lampung, Lampung 35131",
 
   // Nama Brand
   brandName: "CPC Systems",

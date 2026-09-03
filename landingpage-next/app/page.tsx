@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import ProblemSection from "../components/ProblemSection";
@@ -10,7 +11,11 @@ import HowItWorks from "../components/HowItWorks";
 import BenefitsSection from "../components/BenefitsSection";
 import CTASection from "../components/CTASection";
 import Footer from "../components/Footer";
-import RequestDemoModal from "../components/RequestDemoModal";
+
+// Lazy-load modal to keep initial mobile bundle minimal
+const RequestDemoModal = dynamic(() => import("../components/RequestDemoModal"), {
+  ssr: false,
+});
 
 export default function Home() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { HardHat, Menu, X, ArrowRight, PhoneCall } from "lucide-react";
+import { HardHat, Menu, X, ArrowRight, PhoneCall, LogIn } from "lucide-react";
 import { trackEvent } from "./AnalyticsTracker";
 import { getWhatsAppLink } from "../constants/siteConfig";
 import { useDemoModal } from "./DemoModalContext";
@@ -96,14 +96,12 @@ export default function Navbar() {
           {/* CTA Button (Desktop) */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href={getWhatsAppLink()}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackEvent("event_contact_whatsapp_click", { source: "navbar" })}
-              className="px-3 py-2 text-xs font-semibold text-slate-700 hover:text-emerald-700 hover:bg-emerald-50 rounded-lg transition-colors flex items-center gap-1.5 border border-slate-200"
+              href="/login"
+              onClick={() => trackEvent("event_navbar_login_click")}
+              className="px-3 py-2 text-xs font-semibold text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition-colors flex items-center gap-1.5 border border-slate-200"
             >
-              <PhoneCall className="w-3.5 h-3.5 text-emerald-600" />
-              <span>Tanya CS</span>
+              <LogIn className="w-3.5 h-3.5 text-slate-500" />
+              <span>Login</span>
             </a>
             <button
               type="button"
@@ -163,11 +161,22 @@ export default function Navbar() {
               <ArrowRight className="w-4 h-4" />
             </button>
             <a
+              href="/login"
+              onClick={() => {
+                trackEvent("event_navbar_login_click", { source: "navbar_mobile" });
+                setIsMobileMenuOpen(false);
+              }}
+              className="w-full py-2.5 bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs font-semibold rounded-xl flex items-center justify-center gap-2 transition-colors"
+            >
+              <LogIn className="w-4 h-4 text-slate-600" />
+              <span>Login ke Aplikasi</span>
+            </a>
+            <a
               href={getWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackEvent("event_contact_whatsapp_click", { source: "navbar_mobile" })}
-              className="w-full py-2.5 bg-slate-50 text-slate-700 border border-slate-200 text-xs font-semibold rounded-xl flex items-center justify-center gap-2"
+              className="w-full py-2.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-xs font-semibold rounded-xl flex items-center justify-center gap-2 transition-colors"
             >
               <PhoneCall className="w-4 h-4 text-emerald-600" />
               <span>Hubungi Tim Konsultan WhatsApp</span>

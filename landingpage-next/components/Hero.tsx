@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import {
   ArrowRight,
-  ShieldCheck,
   TrendingUp,
   Building,
   CheckCircle2,
@@ -340,17 +339,6 @@ export default function Hero() {
                   </div>
                 )}
 
-              </div>
-              
-              {/* Floating Badge Accent */}
-              <div className="hidden sm:flex absolute -bottom-4 -left-4 bg-white text-slate-800 p-3 rounded-xl shadow-xl border border-slate-200 items-center gap-3">
-                <div className="w-9 h-9 rounded-lg bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold">
-                  <ShieldCheck className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-xs font-bold text-slate-900">Zero Data Loss</div>
-                  <div className="text-[10px] text-slate-500">Sinkronisasi Lapangan & Head Office</div>
-                </div>
               </div>
 
             </div>

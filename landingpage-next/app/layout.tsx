@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   title: "CPC — Sistem Manajemen Konstruksi Perumahan Terintegrasi",
   description:
     "Pantau proyek, material, progres pembangunan, dan biaya perumahan dalam satu sistem terintegrasi. Solusi SaaS enterprise untuk developer dan kontraktor perumahan modern.",
+  icons: {
+    icon: "/logo.jpg",
+    shortcut: "/logo.jpg",
+    apple: "/logo.jpg",
+  },
   keywords: [
     "Sistem Manajemen Konstruksi Perumahan",
     "CPC Construction System",

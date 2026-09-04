@@ -18,9 +18,24 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://landing-page-microdata.vercel.app"),
   title: "CPC — Sistem Manajemen Konstruksi Perumahan Terintegrasi",
   description:
     "Pantau proyek, material, progres pembangunan, dan biaya perumahan dalam satu sistem terintegrasi. Solusi SaaS enterprise untuk developer dan kontraktor perumahan modern.",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: "/logo.jpg",
     shortcut: "/logo.jpg",
@@ -41,6 +56,7 @@ export const metadata: Metadata = {
     title: "CPC — Sistem Manajemen Konstruksi Perumahan Terintegrasi",
     description:
       "Kelola Proyek Konstruksi Perumahan Lebih Mudah. Pantau proyek, material, progres pembangunan, dan biaya dalam satu sistem terintegrasi.",
+    url: "https://landing-page-microdata.vercel.app",
     type: "website",
     locale: "id_ID",
     siteName: "CPC Construction System",

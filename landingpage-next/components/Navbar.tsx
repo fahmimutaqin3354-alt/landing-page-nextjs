@@ -57,7 +57,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo Brand */}
           <a
-            href="#"
+            href="/"
             className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg p-1"
             aria-label="CPC - Sistem Manajemen Konstruksi Perumahan"
           >

@@ -5,35 +5,26 @@ import {
   ArrowRight,
   ShieldCheck,
   TrendingUp,
-  Layers,
   Building,
   CheckCircle2,
-  AlertTriangle,
-  FileText,
-  Clock,
-  DollarSign,
-  Package,
   Activity,
-  Sparkles,
 } from "lucide-react";
 import { trackEvent } from "./AnalyticsTracker";
+import { useDemoModal } from "./DemoModalContext";
 
-interface HeroProps {
-  onRequestDemo: () => void;
-}
-
-export default function Hero({ onRequestDemo }: HeroProps) {
+export default function Hero() {
+  const { openDemoModal } = useDemoModal();
   const [activeTab, setActiveTab] = useState<"overview" | "units" | "materials">("overview");
 
   const handleHeroDemoClick = () => {
     trackEvent("event_hero_demo_click");
-    onRequestDemo();
+    openDemoModal("hero");
   };
 
   return (
     <section className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-gradient-to-b from-slate-100/70 via-slate-50 to-white border-b border-slate-200/60">
-      {/* Background Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40 pointer-events-none" />
+      {/* Background Subtle Grid Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30 pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -124,8 +115,9 @@ export default function Hero({ onRequestDemo }: HeroProps) {
                 {/* Dashboard Tabs */}
                 <div className="flex gap-1 mb-3 bg-slate-800/80 p-1 rounded-lg border border-slate-700/60 text-xs">
                   <button
+                    type="button"
                     onClick={() => setActiveTab("overview")}
-                    className={`flex-1 py-1.5 px-2 rounded-md font-semibold transition ${
+                    className={`flex-1 py-1.5 px-2 rounded-md font-semibold transition cursor-pointer ${
                       activeTab === "overview"
                         ? "bg-blue-600 text-white shadow-xs"
                         : "text-slate-400 hover:text-white"
@@ -134,8 +126,9 @@ export default function Hero({ onRequestDemo }: HeroProps) {
                     Ringkasan Proyek
                   </button>
                   <button
+                    type="button"
                     onClick={() => setActiveTab("units")}
-                    className={`flex-1 py-1.5 px-2 rounded-md font-semibold transition ${
+                    className={`flex-1 py-1.5 px-2 rounded-md font-semibold transition cursor-pointer ${
                       activeTab === "units"
                         ? "bg-blue-600 text-white shadow-xs"
                         : "text-slate-400 hover:text-white"
@@ -144,8 +137,9 @@ export default function Hero({ onRequestDemo }: HeroProps) {
                     Status Unit Kaveling
                   </button>
                   <button
+                    type="button"
                     onClick={() => setActiveTab("materials")}
-                    className={`flex-1 py-1.5 px-2 rounded-md font-semibold transition ${
+                    className={`flex-1 py-1.5 px-2 rounded-md font-semibold transition cursor-pointer ${
                       activeTab === "materials"
                         ? "bg-blue-600 text-white shadow-xs"
                         : "text-slate-400 hover:text-white"
@@ -207,7 +201,7 @@ export default function Hero({ onRequestDemo }: HeroProps) {
 
                       {/* SVG Visual Chart */}
                       <div className="h-28 w-full bg-slate-900/80 rounded-lg p-2 relative flex items-end">
-                        <svg className="w-full h-full overflow-visible" viewBox="0 0 400 100" preserveAspectRatio="none">
+                        <svg className="w-full h-full overflow-visible" viewBox="0 0 400 100" preserveAspectRatio="none" aria-hidden="true">
                           {/* Grid Lines */}
                           <line x1="0" y1="20" x2="400" y2="20" stroke="#334155" strokeDasharray="2" strokeWidth="1" />
                           <line x1="0" y1="50" x2="400" y2="50" stroke="#334155" strokeDasharray="2" strokeWidth="1" />

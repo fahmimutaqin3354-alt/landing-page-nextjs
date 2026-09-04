@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import {
   Layers,
   CheckCircle2,
-  Workflow,
   ArrowRight,
   Database,
   Building2,
@@ -15,12 +14,10 @@ import {
   Wallet,
 } from "lucide-react";
 import { trackEvent } from "./AnalyticsTracker";
+import { useDemoModal } from "./DemoModalContext";
 
-interface SolutionSectionProps {
-  onRequestDemo: () => void;
-}
-
-export default function SolutionSection({ onRequestDemo }: SolutionSectionProps) {
+export default function SolutionSection() {
+  const { openDemoModal } = useDemoModal();
   const [selectedPillar, setSelectedPillar] = useState(0);
 
   const pillars = [
@@ -124,6 +121,7 @@ export default function SolutionSection({ onRequestDemo }: SolutionSectionProps)
                 return (
                   <button
                     key={pillar.id}
+                    type="button"
                     onClick={() => handlePillarClick(idx)}
                     className={`w-full text-left p-3.5 rounded-xl transition-all duration-200 flex items-center justify-between border cursor-pointer ${
                       isSelected
@@ -217,7 +215,7 @@ export default function SolutionSection({ onRequestDemo }: SolutionSectionProps)
                   type="button"
                   onClick={() => {
                     trackEvent("event_navbar_demo_click", { source: "solution_section" });
-                    onRequestDemo();
+                    openDemoModal("solution_section");
                   }}
                   className="w-full sm:w-auto px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold rounded-lg transition shrink-0 cursor-pointer"
                 >

@@ -1,23 +1,28 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { HardHat, Menu, X, ArrowRight, ShieldCheck, PhoneCall } from "lucide-react";
+import { HardHat, Menu, X, ArrowRight, PhoneCall } from "lucide-react";
 import { trackEvent } from "./AnalyticsTracker";
 import { getWhatsAppLink } from "../constants/siteConfig";
+import { useDemoModal } from "./DemoModalContext";
 
-interface NavbarProps {
-  onRequestDemo: () => void;
-}
-
-export default function Navbar({ onRequestDemo }: NavbarProps) {
+export default function Navbar() {
+  const { openDemoModal } = useDemoModal();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -30,13 +35,13 @@ export default function Navbar({ onRequestDemo }: NavbarProps) {
     { name: "Kontak", href: "#kontak" },
   ];
 
-  const handleNavClick = (name: string) => {
+  const handleNavClick = () => {
     setIsMobileMenuOpen(false);
   };
 
   const handleDemoTrigger = () => {
     trackEvent("event_navbar_demo_click");
-    onRequestDemo();
+    openDemoModal("navbar");
     setIsMobileMenuOpen(false);
   };
 
@@ -80,7 +85,7 @@ export default function Navbar({ onRequestDemo }: NavbarProps) {
               <a
                 key={link.name}
                 href={link.href}
-                onClick={() => handleNavClick(link.name)}
+                onClick={handleNavClick}
                 className="px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition-colors"
               >
                 {link.name}
@@ -115,14 +120,14 @@ export default function Navbar({ onRequestDemo }: NavbarProps) {
             <button
               type="button"
               onClick={handleDemoTrigger}
-              className="px-3 py-2 bg-blue-600 text-white text-xs font-semibold rounded-lg shadow-sm"
+              className="px-3 py-2 bg-blue-600 text-white text-xs font-semibold rounded-lg shadow-sm cursor-pointer"
             >
               Demo
             </button>
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="p-2 text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
               aria-expanded={isMobileMenuOpen}
               aria-label="Toggle navigation menu"
             >
@@ -134,13 +139,13 @@ export default function Navbar({ onRequestDemo }: NavbarProps) {
 
       {/* Mobile Menu Dropdown / Drawer */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3 shadow-xl animate-fadeIn">
+        <div className="lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3 shadow-xl">
           <div className="flex flex-col space-y-1">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                onClick={() => handleNavClick(link.name)}
+                onClick={handleNavClick}
                 className="px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-xl transition-colors"
               >
                 {link.name}
@@ -152,7 +157,7 @@ export default function Navbar({ onRequestDemo }: NavbarProps) {
             <button
               type="button"
               onClick={handleDemoTrigger}
-              className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl flex items-center justify-center gap-2 shadow-md"
+              className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl flex items-center justify-center gap-2 shadow-md cursor-pointer"
             >
               <span>Request Live Demo</span>
               <ArrowRight className="w-4 h-4" />

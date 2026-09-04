@@ -12,12 +12,11 @@ import {
   Sparkles,
 } from "lucide-react";
 import { trackEvent } from "./AnalyticsTracker";
+import { useDemoModal } from "./DemoModalContext";
 
-interface FeatureSectionProps {
-  onRequestDemo: () => void;
-}
+export default function FeatureSection() {
+  const { openDemoModal } = useDemoModal();
 
-export default function FeatureSection({ onRequestDemo }: FeatureSectionProps) {
   const features = [
     {
       icon: FolderKanban,
@@ -171,7 +170,7 @@ export default function FeatureSection({ onRequestDemo }: FeatureSectionProps) {
             type="button"
             onClick={() => {
               trackEvent("event_navbar_demo_click", { source: "feature_banner" });
-              onRequestDemo();
+              openDemoModal("feature_banner");
             }}
             className="w-full sm:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs sm:text-sm rounded-xl transition shrink-0 cursor-pointer shadow-md shadow-blue-600/20"
           >

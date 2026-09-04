@@ -4,15 +4,14 @@ import React from "react";
 import { ArrowRight, PhoneCall, Calendar, CheckCircle2, ShieldCheck, HardHat } from "lucide-react";
 import { trackEvent } from "./AnalyticsTracker";
 import { getWhatsAppLink } from "../constants/siteConfig";
+import { useDemoModal } from "./DemoModalContext";
 
-interface CTASectionProps {
-  onRequestDemo: () => void;
-}
+export default function CTASection() {
+  const { openDemoModal } = useDemoModal();
 
-export default function CTASection({ onRequestDemo }: CTASectionProps) {
   const handleCTADemoClick = () => {
     trackEvent("event_cta_bottom_demo_click");
-    onRequestDemo();
+    openDemoModal("cta_section");
   };
 
   return (

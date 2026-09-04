@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { X, CheckCircle2, Building2, User, Mail, Phone, Calendar, ArrowRight, ShieldCheck, Loader2 } from "lucide-react";
+import { X, CheckCircle2, Building2, User, Mail, Phone, ArrowRight, ShieldCheck, Loader2 } from "lucide-react";
 import { trackEvent } from "./AnalyticsTracker";
 import { getWhatsAppLink } from "../constants/siteConfig";
 

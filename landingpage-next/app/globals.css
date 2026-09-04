@@ -4,6 +4,8 @@
   html {
     scroll-behavior: smooth;
     color-scheme: light;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
@@ -17,7 +19,7 @@
 /* Content visibility optimization for below-the-fold sections */
 .content-auto {
   content-visibility: auto;
-  contain-intrinsic-size: 1px 700px;
+  contain-intrinsic-size: auto 600px;
 }
 
 /* Custom subtle scrollbar */
@@ -37,16 +39,6 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
-}
-
-/* Custom animation keyframes */
-@keyframes pulse-subtle {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
-}
-
-.animate-pulse-subtle {
-  animation: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 /* Respect reduced motion preference for performance and accessibility */

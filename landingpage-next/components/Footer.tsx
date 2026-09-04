@@ -4,12 +4,11 @@ import React from "react";
 import { HardHat, Mail, Phone, MapPin, ArrowUpRight, Shield } from "lucide-react";
 import { trackEvent } from "./AnalyticsTracker";
 import { SITE_CONFIG, getWhatsAppLink } from "../constants/siteConfig";
+import { useDemoModal } from "./DemoModalContext";
 
-interface FooterProps {
-  onRequestDemo: () => void;
-}
+export default function Footer() {
+  const { openDemoModal } = useDemoModal();
 
-export default function Footer({ onRequestDemo }: FooterProps) {
   return (
     <footer id="kontak" className="bg-slate-950 text-slate-400 text-xs border-t border-slate-800 content-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -124,7 +123,7 @@ export default function Footer({ onRequestDemo }: FooterProps) {
                 type="button"
                 onClick={() => {
                   trackEvent("event_navbar_demo_click", { source: "footer" });
-                  onRequestDemo();
+                  openDemoModal("footer");
                 }}
                 className="w-full py-2.5 px-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-semibold text-xs transition flex items-center justify-center gap-1.5 cursor-pointer"
               >

@@ -96,7 +96,7 @@ export default function Navbar() {
           {/* CTA Button (Desktop) */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="/login"
+              href={process.env.NEXT_PUBLIC_LOGIN_URL || "/login"}
               onClick={() => trackEvent("event_navbar_login_click")}
               className="px-3 py-2 text-xs font-semibold text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition-colors flex items-center gap-1.5 border border-slate-200"
             >
@@ -161,7 +161,7 @@ export default function Navbar() {
               <ArrowRight className="w-4 h-4" />
             </button>
             <a
-              href="/login"
+              href={process.env.NEXT_PUBLIC_LOGIN_URL || "/login"}
               onClick={() => {
                 trackEvent("event_navbar_login_click", { source: "navbar_mobile" });
                 setIsMobileMenuOpen(false);

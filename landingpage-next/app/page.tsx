@@ -6,6 +6,7 @@ import SolutionSection from "../components/SolutionSection";
 import FeatureSection from "../components/FeatureSection";
 import HowItWorks from "../components/HowItWorks";
 import BenefitsSection from "../components/BenefitsSection";
+import PricelistSection from "../components/PricelistSection";
 import CTASection from "../components/CTASection";
 import Footer from "../components/Footer";
 import { DemoModalProvider } from "../components/DemoModalContext";
@@ -37,7 +38,10 @@ export default function Home() {
           {/* 6. Measurable Business Benefits Section (Server Component) */}
           <BenefitsSection />
 
-          {/* 7. Conversion CTA Banner Section */}
+          {/* 7. Pricelist Section */}
+          <PricelistSection />
+
+          {/* 8. Conversion CTA Banner Section */}
           <CTASection />
         </main>
 

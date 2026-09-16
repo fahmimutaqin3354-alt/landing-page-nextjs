@@ -32,6 +32,7 @@ export default function Navbar() {
     { name: "Fitur Utama", href: "#fitur" },
     { name: "Cara Kerja", href: "#cara-kerja" },
     { name: "Manfaat", href: "#manfaat" },
+    { name: "Harga", href: "#harga" },
     { name: "Kontak", href: "#kontak" },
   ];
 

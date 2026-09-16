@@ -1,0 +1,111 @@
+{
+  "sectionHeader": {
+    "badge": "Pilihan Paket Harga",
+    "title": "Investasi Transparan untuk Setiap Skala Proyek",
+    "subtitle": "Pilih paket yang paling sesuai dengan kebutuhan manajemen proyek perumahan Anda. Mulai dari uji coba gratis hingga solusi kustom tanpa batas."
+  },
+  "plans": [
+    {
+      "id": "free",
+      "name": "Free",
+      "badge": "Uji Coba 1 Bulan",
+      "price": "Rp 0",
+      "period": "/ 1 bulan pertama",
+      "description": "Solusi sempurna untuk mencoba langsung kemudahan digitalisasi proyek perumahan rintisan Anda.",
+      "highlighted": false,
+      "buttonText": "Coba Gratis 1 Bulan",
+      "action": "demo",
+      "whatsappMessage": "Halo Tim CPC, saya ingin mencoba uji coba paket Free (1 User, 1 Unit Rumah) selama 1 bulan.",
+      "features": [
+        {
+          "title": "1 Akun User",
+          "detail": "Akses operasional untuk mandor atau pengawas lapangan"
+        },
+        {
+          "title": "Gratis Penuh 1 Bulan",
+          "detail": "Penggunaan gratis selama 1 bulan untuk 1 user tanpa ikatan kontrak"
+        },
+        {
+          "title": "Kapasitas 1 Unit Rumah",
+          "detail": "Pantau progres fisik harian & jadwal pengerjaan 1 unit rumah"
+        },
+        {
+          "title": "Laporan Keuangan Standar",
+          "detail": "Pencatatan kas masuk, termin pembayaran, dan pengeluaran proyek"
+        },
+        {
+          "title": "Monitoring Material Lapangan",
+          "detail": "Pencatatan pemakaian & sisa stok material di lokasi proyek"
+        }
+      ]
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "badge": "Paling Populer",
+      "price": "Rp 750.000",
+      "period": "/ bulan",
+      "description": "Pilihan terbaik untuk developer & kontraktor aktif dengan manajemen multi-kaveling yang berkembang.",
+      "highlighted": true,
+      "buttonText": "Pilih Paket Pro",
+      "action": "whatsapp",
+      "whatsappMessage": "Halo Tim CPC, saya tertarik untuk berlangganan Paket Pro (10 Unit, 5 User). Mohon info pendaftaran dan aktivasinya.",
+      "features": [
+        {
+          "title": "Kapasitas 10 Unit Rumah",
+          "detail": "Kelola hingga 10 unit kaveling secara serentak dalam 1 dashboard"
+        },
+        {
+          "title": "5 Akun User (Multi-Role)",
+          "detail": "Akses terpisah: Owner, PM, Logistik, Pengawas Lapangan, Mandor"
+        },
+        {
+          "title": "Monitoring Material & Kontrol BoQ",
+          "detail": "Validasi penggunaan material terhadap BoQ cegah pembengkakan biaya"
+        },
+        {
+          "title": "Laporan Keuangan Komprehensif",
+          "detail": "Arus kas real-time, laba-rugi per unit, dan ekspor 1-klik PDF/Excel"
+        },
+        {
+          "title": "Notifikasi Otomatis Owner",
+          "detail": "Pemberitahuan instan via WhatsApp / App saat ada approval & progres kritis"
+        }
+      ]
+    },
+    {
+      "id": "custom",
+      "name": "Custom",
+      "badge": "Enterprise & Fleksibel",
+      "price": "Hubungi Kami",
+      "period": "/ sesuai kebutuhan",
+      "description": "Disesuaikan secara penuh untuk developer skala besar.",
+      "highlighted": false,
+      "buttonText": "Konsultasi Kustom",
+      "action": "whatsapp",
+      "whatsappMessage": "Halo Tim CPC, saya ingin konsultasi mengenai Paket Custom dengan kebutuhan khusus proyek perumahan kami.",
+      "features": [
+        {
+          "title": "Semua Fitur Paket Free",
+          "detail": "Mencakup seluruh modul dasar pelaporan & pencatatan"
+        },
+        {
+          "title": "Semua Fitur Paket Pro",
+          "detail": "Mencakup notifikasi owner, kontrol BoQ, & manajemen multi-user"
+        },
+        {
+          "title": "Fitur Request Pelanggan Bebas Kustom",
+          "detail": "Bisa kustom fitur apa saja sesuai kebutuhan & alur bisnis Anda"
+        },
+        {
+          "title": "Kapasitas Unit & User Tanpa Batas",
+          "detail": "Jumlah kaveling perumahan & kuota pengguna disesuaikan bebas"
+        },
+        {
+          "title": "Dedicated Support & Pelatihan Langsung",
+          "detail": "Pendampingan tim teknis khusus dan training langsung di lokasi"
+        }
+      ]
+    }
+  ]
+}

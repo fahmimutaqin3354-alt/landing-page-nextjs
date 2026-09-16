@@ -8,7 +8,8 @@ export type AnalyticsEvent =
   | "event_contact_whatsapp_click"
   | "event_how_it_works_step_click"
   | "event_solution_tab_click"
-  | "event_navbar_login_click";
+  | "event_navbar_login_click"
+  | "event_pricing_card_click";
 
 export function trackEvent(
   eventName: AnalyticsEvent,

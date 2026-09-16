@@ -59,7 +59,7 @@ export default function BenefitsSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold mb-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold mb-3">
             <TrendingUp className="w-3.5 h-3.5" />
             <span>Dampak & Nilai Bisnis</span>
           </div>
@@ -78,11 +78,11 @@ export default function BenefitsSection() {
             return (
               <div
                 key={idx}
-                className="bg-white p-7 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md hover:border-emerald-400 transition-all duration-200 flex flex-col justify-between"
+                className="group bg-white p-7 rounded-2xl border border-slate-200 shadow-xs hover:shadow-xl hover:border-blue-500 hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors duration-200">
                       <Icon className="w-6 h-6" />
                     </div>
                     <div className="text-right">
@@ -95,7 +95,7 @@ export default function BenefitsSection() {
                     </div>
                   </div>
 
-                  <h3 className="text-lg font-bold text-slate-900 mb-2">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
                     {benefit.title}
                   </h3>
 
@@ -104,8 +104,8 @@ export default function BenefitsSection() {
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-emerald-600">
-                  <CheckCircle2 className="w-4 h-4 shrink-0" />
+                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-blue-600">
+                  <CheckCircle2 className="w-4 h-4 shrink-0 text-blue-600" />
                   <span>Standarisasi Operasional Terjamin</span>
                 </div>
               </div>

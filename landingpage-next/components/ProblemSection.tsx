@@ -54,7 +54,7 @@ export default function ProblemSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-red-700 text-xs font-semibold mb-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold mb-3">
             <AlertOctagon className="w-3.5 h-3.5" />
             <span>Tantangan Operasional Lapangan</span>
           </div>
@@ -73,18 +73,18 @@ export default function ProblemSection() {
             return (
               <div
                 key={idx}
-                className="group bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 hover:border-red-300 shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between"
+                className="group bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 hover:border-blue-500 shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center group-hover:bg-red-600 group-hover:text-white transition-colors duration-200">
+                    <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors duration-200">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 bg-slate-100 px-2.5 py-1 rounded-md">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-2.5 py-1 rounded-md border border-blue-100">
                       {item.tag}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-red-600 transition-colors">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-sm text-slate-600 leading-relaxed">
@@ -92,7 +92,7 @@ export default function ProblemSection() {
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-red-600/80 gap-1">
+                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-blue-600 gap-1">
                   <span>Dampak: Inefisiensi Biaya & Waktu</span>
                   <ArrowDownRight className="w-4 h-4" />
                 </div>
